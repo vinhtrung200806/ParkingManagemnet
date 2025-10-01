@@ -8,8 +8,8 @@ public class Vehicle {
     private String phone;
     private Date entryTime;
     private Date exitTime;
-    private String type;   // Car / Other
-    private String fuel;   // Xe điện / Xăng / Dầu
+    private String type;  
+    private String fuel;  
 
     public Vehicle(String license, String owner, String phone, Date entryTime, String type, String fuel) {
         this.license = license;
@@ -30,7 +30,7 @@ public class Vehicle {
 
     public void setExitTime(Date exitTime) { this.exitTime = exitTime; }
 
-    // Giả sử phí = số giờ * 5000
+   
     public long calculateFee() {
         if (exitTime == null || entryTime == null) return 0;
         long diffMs = exitTime.getTime() - entryTime.getTime();
@@ -39,3 +39,4 @@ public class Vehicle {
         return hours * 5000;
     }
 }
+

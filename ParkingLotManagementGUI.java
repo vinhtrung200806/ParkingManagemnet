@@ -20,12 +20,12 @@ public class ParkingLotManagementGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // ================= KHU HIỂN THỊ =================
+        
         displayArea = new JTextArea(12, 70);
         displayArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(displayArea);
 
-        // ================= NÚT CHỨC NĂNG =================
+        
         JPanel buttonPanel = new JPanel(new FlowLayout());
         JButton addBtn = new JButton("Thêm Xe");
         JButton deleteBtn = new JButton("Xóa Xe");
@@ -43,7 +43,7 @@ public class ParkingLotManagementGUI extends JFrame {
         buttonPanel.add(searchBtn);
         buttonPanel.add(countBtn);
 
-        // ================= FORM NHẬP =================
+      
         JPanel formPanel = new JPanel(new GridLayout(7, 2, 10, 10));
         formPanel.setBorder(BorderFactory.createTitledBorder("Thông tin xe"));
 
@@ -75,13 +75,13 @@ public class ParkingLotManagementGUI extends JFrame {
         cbFuel = new JComboBox<>(new String[]{"Xe điện", "Xăng", "Dầu"});
         formPanel.add(cbFuel);
 
-        // ================= BỐ CỤC CHÍNH =================
+      
         setLayout(new BorderLayout(10, 10));
         add(scrollPane, BorderLayout.NORTH);
         add(buttonPanel, BorderLayout.CENTER);
         add(formPanel, BorderLayout.SOUTH);
 
-        // ================= ACTIONS =================
+       
         addBtn.addActionListener(e -> {
             try {
                 String license = tfLicense.getText();
@@ -182,3 +182,4 @@ public class ParkingLotManagementGUI extends JFrame {
         SwingUtilities.invokeLater(() -> new ParkingLotManagementGUI().setVisible(true));
     }
 }
+
